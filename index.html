@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Calculator</title>
+</head>
+<body>
+    <main class="calc-container">
+        <!-- ******************** DISPLAY ******************** -->
+        <div class="calc-display">
+        <!-- ***** display cotrols ***** -->
+            <section class="display-controls">
+                <button type="submit" class="btn arrow-up btn-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 24 24">
+                        <path d="M12 3l12 18h-24z" />
+                    </svg>
+                </button>
+                <button type="submit" class="btn arrow-down btn-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 24 24">
+                        <path d="M12 21l-12-18h24z" />
+                    </svg>
+                </button>
+                <p class="underline"></p>
+            </section>
+
+        <!-- ***** history display ***** -->
+            <section class="display-history">
+            </section>
+            
+            <!-- ***** input display ***** -->
+            <section class="display-input" id="display-input">
+                <p class="overline"></p>
+                <span class="display-input-higher"></span>
+                <span class="display-input-lower"></span>
+
+            </section>
+        </div>
+
+        <!-- ******************** KEYBOARD ******************** -->
+        <div class="calc-keyboard" id="q">
+        <!-- ***** memory btns ***** -->
+                <button type="submit" class="btn btn-memory" id="mc">MC</button>
+                <button type="submit" class="btn btn-memory" id="mr">MR</button>
+                <button type="submit" class="btn btn-memory" id="ms">MS</button>
+                <button type="submit" class="btn btn-memory" id="m-plus">M+</button>
+                <button type="submit" class="btn btn-memory" id="m-minus">M-</button>
+        <!-- ***** clear btns ***** -->
+                <button type="submit" class="btn btn-func btn-clr" id="move-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="15" viewBox="0 0 17 24">
+                        <path d="M0 12l9-8v6h15v4h-15v6z" />
+                    </svg>
+                </button>
+                <button type="submit" class="btn btn-func btn-clr" id="clear">C</button>
+                <button type="submit" class="btn btn-func btn-clr" id='clear-all'>CE</button>
+        <!-- ***** numerical btns ***** -->
+                <button type="submit" data-action="numerical" class="btn btn-num" id='7'>7</button>
+                <button type="submit" data-action="numerical" class="btn btn-num" id="8">8</button>
+                <button type="submit" data-action="numerical" class="btn btn-num" id="9">9</button>
+                <button type="submit" data-action="numerical" class="btn btn-num" id="4">4</button>
+                <button type="submit" data-action="numerical" class="btn btn-num" id="5">5</button>
+                <button type="submit" data-action="numerical" class="btn btn-num" id="6">6</button>
+                <button type="submit" data-action="numerical" class="btn btn-num" id="1">1</button>
+                <button type="submit" data-action="numerical" class="btn btn-num" id="2">2</button>
+                <button type="submit" data-action="numerical" class="btn btn-num" id="3">3</button>
+                <button type="submit" data-action="numerical" class="btn btn-num zero-num" id="0">0</button>
+                <button type="submit" data-action="numerical" class="btn"  id=",">,</button>
+        <!-- ***** operation btns ***** -->
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id='negate'>+-</button>
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="sqrt">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 25 25" height="15" width="23" viewBox="-10 0 35 35"
+                    >
+                        <path
+                            d="M8,30c-0.416,0-0.7896-0.2578-0.9365-0.6489L4.3071,22H3c-0.5522,0-1-0.4478-1-1s0.4478-1,1-1h2c0.417,0,0.79,0.2588,0.9365,0.6489l1.9702,5.2539l7.1377-23.1968C15.1733,2.2861,15.561,2,16,2h13c0.5522,0,1,0.4478,1,1s-0.4478,1-1,1H16.7388L8.9556,29.2939c-0.1255,0.4092-0.4976,0.6929-0.9253,0.7056C8.02,30,8.0098,30,8,30z" />
+                    </svg>
+                </button>
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="div">/</button>
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="percent">%</button>
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="mult">*</button>
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="x">1/x</button>
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="sub">-</button>
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="equal-sign">=</button>
+                <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="add">+</button> 
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
