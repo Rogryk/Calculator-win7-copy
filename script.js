@@ -41,6 +41,20 @@ const keyboardHandler = (e) => {
   // click on numbers
   if (e.target.dataset.action === "numerical") {
     inputNumber += e.target.innerHTML;
+  } else if (e.target.dataset.action === "clean") {
+    switch (e.target.id) {
+      case "backspace":
+        inputNumber = inputNumber.slice(0, -1);
+        break;
+      case "clear-number":
+        inputNumber = "0";
+        break;
+      case "clear-equation":
+        inputNumber = "0";
+        inputEquation = [];
+        inputSign = "";
+        break;
+    }
   } else if (e.target.dataset.action === "operation") {
     // make exception for +- btn
     // make exception for equity btn
@@ -49,35 +63,30 @@ const keyboardHandler = (e) => {
     if (inputNumber || e.target.id === "equal-sign") {
       switch (e.target.id) {
         case "add":
-          console.log("add");
           inputEquation.push(inputSign);
           inputEquation.push(Number(inputNumber));
           inputSign = "+";
           inputNumber = "";
           break;
         case "sub":
-          console.log("sub");
           inputEquation.push(inputSign);
           inputEquation.push(Number(inputNumber));
           inputSign = "-";
           inputNumber = "";
           break;
         case "mult":
-          console.log("mult");
           inputEquation.push(inputSign);
           inputEquation.push(Number(inputNumber));
           inputSign = "*";
           inputNumber = "";
           break;
         case "div":
-          console.log("div");
           inputEquation.push(inputSign);
           inputEquation.push(Number(inputNumber));
           inputSign = "/";
           inputNumber = "";
           break;
         case "equal-sign":
-          //   console.log("equal");
           inputEquation.push(inputSign);
           inputEquation.push(Number(inputNumber));
           result = calculation(inputEquation);
@@ -92,9 +101,9 @@ const keyboardHandler = (e) => {
       inputSign = e.target.innerHTML;
     }
   }
-
-  console.log(inputNumber);
-  console.log(inputEquation);
+  if (!inputNumber) {
+    inputNumber = "0";
+  }
   inputDisplayHandler();
 };
 
