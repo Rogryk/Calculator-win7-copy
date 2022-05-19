@@ -82,7 +82,7 @@
 }
 
 html {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Segoe UI", "Noto Sans", sans-serif;
 }
 
 body {
@@ -106,7 +106,7 @@ button {
 
 h1 {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 400;
   color: black;
 }
 
@@ -179,8 +179,9 @@ h1 {
   outline: none;
   margin: 0 3px;
   padding: 0 4px;
+  font-family: "Segoe UI";
   text-transform: capitalize;
-  font-size: 0.75rem;
+  font-size: 0.77rem;
 }
 
 .window-menu-container button:first-child {
@@ -216,7 +217,7 @@ h1 {
   outline: 1px solid var(--outline-color);
   border-radius: 0.15rem;
   overflow: auto;
-  font-family: Consolas;
+  font-family: "Consolas";
 }
 
 .underline,
