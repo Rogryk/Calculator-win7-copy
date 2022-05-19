@@ -5,10 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+    </style>
     <title>Calculator</title>
 </head>
 <body>
+        <!-- ******************** OUTER LAYOUT ******************** -->
+    <div class="outer-layout">
+        <section class="window-controls">
+            <div class="calculator-icon-container">
+                <img class="calculator-icon" src="./images/windows-7-calculator-icon.bmp" alt="">
+            </div>
+            <h1 class="title">Kalkulator</h1>
+            <div class="window-btns">
+                <div>
+                    <img class="btn-img" src="./images/minimise-btn.bmp" alt="">
+                </div>
+                <div>
+                    <img class="btn-img" src="./images/resize-grayed-btn.bmp" alt="">
+                </div>
+                <div>
+                    <img class="btn-img" src="./images/x-btn.bmp" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="window-menu-container">
+            <button type="submit">widok</button>
+            <button type="submit">edycja</button>
+            <button type="submit">pomoc</button>
+
+        </section>
+
     <main class="calc-container">
         <!-- ******************** DISPLAY ******************** -->
         <div class="calc-display">
@@ -86,6 +114,8 @@
                 <button type="submit" data-action="operation" class="btn btn-func btn-oper" id="add">+</button> 
         </div>
     </main>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

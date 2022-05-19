@@ -1,7 +1,7 @@
 :root {
   /* size */
-  --btn-height: 27px;
-  --btn-width: 33px;
+  /* --btn-height: 25px;   */
+  /* --btn-width: 32px;  */
   /* colors  */
   --main-color: rgb(217, 228, 241);
   --border-color: rgb(245, 249, 252);
@@ -11,10 +11,33 @@
     rgba(229, 238, 251, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
+  --window-menu-background-color: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgb(229, 234, 245) 35%,
+    rgb(212, 219, 237) 40%,
+    rgb(225, 230, 246) 100%
+  );
+  --window-menu-btns-outline-color: rgb(176, 177, 177);
+  --window-menu-btn-background-hover-color: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgb(229, 234, 245) 35%,
+    rgb(212, 219, 237) 40%,
+    rgb(196, 202, 217) 50%,
+    rgb(225, 230, 246) 100%
+  );
   --underline-color: linear-gradient(
     180deg,
     rgb(255, 255, 255) 0%,
     rgb(209, 215, 222) 100%
+  );
+  --btn-windows-red: linear-gradient(
+    180deg,
+    rgb(232, 166, 153) 0%,
+    rgb(232, 166, 153) 50%,
+    rgb(184, 67, 44) 55%,
+    rgb(210, 127, 111) 100%
   );
   --btn-display-arrow-color: rgb(226, 237, 250);
   --btn-display-arrow-outline-color: rgb(202, 211, 221);
@@ -45,6 +68,10 @@
   margin: 0;
 }
 
+html {
+  font-family: "Noto Sans", sans-serif;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -55,6 +82,7 @@ body {
 
 svg {
   display: block;
+  margin: auto;
 }
 
 button {
@@ -62,14 +90,88 @@ button {
   outline: 1px solid var(--btn-outline-color);
 }
 
+h1 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: black;
+}
+
 /************* MAIN CONTAINER *************/
-.calc-container {
+
+.outer-layout {
   height: 420px;
-  width: 227px;
+  width: 226px;
+  padding: 7px;
+  background: rgb(186, 210, 234);
   border: 1px solid black;
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
+}
+
+.window-controls {
+  width: 100%;
+  display: flex;
+  padding: 0 2px;
+}
+.calculator-icon-container {
+  height: 16px;
+  width: 12px;
+  margin-left: 2px;
+  margin-right: 7px;
+  object-fit: scale-down;
+}
+
+.window-btns {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.window-btns div {
+  padding-left: 2px;
+}
+
+.window-menu-container {
+  height: 19px;
+  width: 100%;
+  border: 1px solid rgb(234, 238, 247);
+  border-bottom: 1px solid rgb(182, 188, 204);
+  padding: 1px 1px 0 0;
+  display: flex;
+  background: var(--window-menu-background-color);
+}
+
+.window-menu-container button {
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0 3px;
+  padding: 0 4px;
+  text-transform: capitalize;
+  font-size: 0.75rem;
+}
+
+.window-menu-container button:first-child {
+  margin-left: 1px;
+}
+
+.window-menu-container button:hover {
+  padding: 0 3px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.1rem;
+  outline: 1px solid var(--window-menu-btns-outline-color);
+  background: var(--window-menu-btn-background-hover-color);
+}
+
+.calc-container {
+  height: calc(100% - 22px - 19px);
+  width: 100%;
+  padding-top: 11px;
   background: var(--main-color);
+  /* border: 1px solid rgb(182, 188, 204); */
+
+  /* border: 3px solid; */
 }
 
 /************* DISPLAY *************/
@@ -77,13 +179,13 @@ button {
   height: 150px;
   width: 190px;
   margin: 0 auto;
-  margin-top: 58px;
   padding: 0 5px;
   background: var(--display-color);
   border: 1px solid var(--border-color);
   outline: 1px solid var(--outline-color);
   border-radius: 0.15rem;
   overflow: auto;
+  font-family: Consolas;
 }
 
 .underline,
@@ -161,14 +263,14 @@ button {
 
 .display-input-higher {
   height: 1rem;
-  font-size: 0.9rem;
+  padding-top: 0.25rem;
+  font-size: 0.75rem;
   grid-row: 1;
   overflow-x: inherit;
 }
 .display-input-lower {
   height: 2rem;
-  padding-top: 0.4rem;
-  font-size: 1.3rem;
+  font-size: 1.55rem;
   font-weight: 500;
   grid-row: 2;
   overflow-x: inherit;
@@ -234,7 +336,7 @@ button {
 .btn {
   font-size: 0.78rem;
   /* border: 1px solid var(--outline-color); */
-  border-radius: 0.15rem;
+  border-radius: 0.07rem;
 }
 
 .btn:hover {
