@@ -44,19 +44,31 @@
   --btn-memory-color: rgb(214, 225, 238);
   --btn-func-color: linear-gradient(
     180deg,
-    rgb(233, 240, 247) 0%,
-    rgb(233, 240, 247) 50%,
-    rgb(214, 225, 239) 55%,
-    rgb(214, 225, 239) 100%
+    rgba(233, 240, 247) 0%,
+    rgba(233, 240, 247) 50%,
+    rgba(214, 225, 239) 55%,
+    rgba(214, 225, 239) 100%
   );
-  --btn-hover-color: linear-gradient(
-    180deg,
-    rgb(253, 227, 196) 0%,
-    rgb(253, 227, 196) 50%,
-    rgb(254, 208, 111) 55%,
-    rgb(254, 208, 111) 90%,
-    rgb(253, 227, 196) 100%
-  );
+  --btn-hover-color: radial-gradient(
+      ellipse at bottom,
+      rgba(255, 255, 255, 0.4) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(253, 227, 196, 1) 0%,
+      rgba(253, 227, 196, 1) 50%,
+      rgba(254, 208, 111, 1) 55%,
+      rgba(254, 208, 111, 1) 90%,
+      rgba(253, 227, 196, 1) 100%
+    );
+
+  /* --btn-keyboard-hover-radial-color: radial-gradient(
+    ellipse at bottom,
+    rgb(255, 255, 255),
+    transparent
+  ); */
+
   --btn-border-color: rgb(245, 249, 252);
   --btn-outline-color: rgb(135, 151, 170);
 }
@@ -341,10 +353,15 @@ h1 {
 
 .btn:hover {
   background: var(--btn-hover-color);
+
   border: 1px solid rgb(255, 255, 255);
   outline: 1px solid rgb(251, 216, 6);
-  transition: 0.2s ease-out;
-  background-position: 100px;
+  transition: 0.2s linear;
+  /* background-position: 100px; */
+}
+
+.btn:hover::after {
+  background: var(--btn-keyboard-hover-radial-color);
 }
 
 .btn-memory {
