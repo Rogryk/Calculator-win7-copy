@@ -4,6 +4,7 @@
   /* --btn-width: 32px;  */
   /* colors  */
   --main-color: rgb(217, 228, 241);
+  --main-font-color: rgb(30, 57, 91);
   --border-color: rgb(245, 249, 252);
   --outline-color: rgb(135, 151, 170);
   --display-color: linear-gradient(
@@ -394,3 +395,27 @@ h1 {
 .btn-num {
   font-size: 0.95rem;
 }
+
+/* backspace arrow */
+#backspace {
+  position: relative;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 5px solid var(--main-font-color);
+  padding-left: 5px;
+}
+
+.arrow-tale {
+  width: 13px;
+  height: 2px;
+  background-color: var(--main-font-color);
+  position: absolute;
+  top: 11px;
+  left: 10px;
+}
+/* endof backspace arrow */
