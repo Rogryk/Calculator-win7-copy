@@ -141,6 +141,23 @@ h1 {
 
 .window-btns div {
   padding-left: 2px;
+  position: relative;
+}
+
+.highlighted {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.highlighted:hover {
+  opacity: 1;
+}
+
+.btn-window-x {
+  height: fit-content;
+  width: fit-content;
 }
 
 .window-menu-container {
