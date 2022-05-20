@@ -198,7 +198,7 @@ h1 {
 }
 
 .calc-container {
-  height: calc(100% - 22px - 19px);
+  height: calc(100% - 22px - 19px + 2px);
   width: 100%;
   padding-top: 11px;
   background: var(--main-color);
@@ -359,11 +359,11 @@ h1 {
   width: 190px;
   height: 187px;
   margin: 0 auto;
-  margin-top: 6px;
+  margin-top: 7px;
 
   display: grid;
-  grid-template-columns: repeat(5, 30px);
-  grid-template-rows: repeat(6, 23px);
+  grid-template-columns: repeat(5, 32px);
+  grid-template-rows: repeat(6, 25px);
   column-gap: 5px;
   row-gap: 5px;
   justify-content: space-between;
