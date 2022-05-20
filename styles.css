@@ -167,7 +167,7 @@ h1 {
   width: 100%;
   border: 1px solid rgb(234, 238, 247);
   border-bottom: 1px solid rgb(182, 188, 204);
-  padding: 1px 1px 0 0;
+  padding: 0px 1px 0 0;
   display: flex;
   background: var(--window-menu-background-color);
 }
@@ -179,9 +179,10 @@ h1 {
   outline: none;
   margin: 0 3px;
   padding: 0 4px;
+
   font-family: "Segoe UI";
   text-transform: capitalize;
-  font-size: 0.77rem;
+  font-size: 0.75rem;
 }
 
 .window-menu-container button:first-child {
