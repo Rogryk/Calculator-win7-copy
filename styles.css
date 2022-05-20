@@ -5,6 +5,13 @@
   /* colors  */
   --main-color: rgb(217, 228, 241);
   --main-font-color: rgb(30, 57, 91);
+  --outer-window-color: linear-gradient(
+    180deg,
+    rgb(152, 180, 208) 0%,
+    rgb(219, 231, 244) 28%,
+    rgb(186, 210, 234) 29%,
+    rgb(186, 210, 234) 100%
+  );
   --border-color: rgb(245, 249, 252);
   --outline-color: rgb(135, 151, 170);
   --display-color: linear-gradient(
@@ -116,7 +123,7 @@ h1 {
   height: 420px;
   width: 226px;
   padding: 7px;
-  background: rgb(186, 210, 234);
+  background: var(--outer-window-color);
   border: 1px solid black;
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
