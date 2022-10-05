@@ -5,4 +5,4 @@ Calculating logics not yet implemented and CSS needs some tidying up. Still I li
 
 # LIVE PREVIEW
 
-calc-win7-copy-rg.netlify.app
+https://calc-win7-copy-rg.netlify.app
